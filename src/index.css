@@ -1,0 +1,8 @@
+body {
+  background-image: linear-gradient(to left bottom, #656ad6, #9761cb, #bc58bb, #d751a6, #e94f8e, #f3557f, #f95f71, #fc6b63, #ff795d, #ff8858, #ff9754, #ffa553);
+  color: rgb(255, 252, 220);
+  align-items: center;
+}
+.header, .footer, .choose-sign, .date {
+  text-align: center;
+}

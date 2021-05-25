@@ -21,8 +21,10 @@ class App extends React.Component {
     const URL = `https://aztro.sameerkumar.website/?sign=${mySign}&day=today`;
     fetch(URL, {
         method: 'POST'
-    }).then(response => response.json())
-    .then(json => { this.setState({json}); });
+    }).then(response => response.json())            // add error handling
+    .then(json => { 
+      this.setState({json}); 
+    });
     document.querySelector(".horoscope-data").classList.remove("d-none");
     localStorage.setItem("lastSign", mySign);
   }
@@ -31,32 +33,97 @@ render() {
     return (
       <React.Fragment>
         <div>
-          <label htmlFor="signs">Your sign:</label>
-          <select name="signs" id="signs" onChange={this.getHoroscope}>
-            <option value="aries">Aries</option>
-            <option value="taurus">Taurus</option>
-            <option value="gemini">Gemini</option>
-            <option value="cancer">Cancer</option>
-            <option value="leo">Leo</option>
-            <option value="virgo">Virgo</option>
-            <option value="libra">Libra</option>
-            <option value="scorpio">Scorpio</option>
-            <option value="sagittarius">Sagittarius</option>
-            <option value="capricorn">Capricorn</option>
-            <option value="aquarius">Aquarius</option>
-            <option value="pisces">Pisces</option>
-          </select>
+          <div className="choose-sign">
+            <label htmlFor="signs">Your sign:</label>
+            <select name="signs" id="signs" onChange={this.getHoroscope}>
+              <option value="aries">Aries</option>
+              <option value="taurus">Taurus</option>
+              <option value="gemini">Gemini</option>
+              <option value="cancer">Cancer</option>
+              <option value="leo">Leo</option>
+              <option value="virgo">Virgo</option>
+              <option value="libra">Libra</option>
+              <option value="scorpio">Scorpio</option>
+              <option value="sagittarius">Sagittarius</option>
+              <option value="capricorn">Capricorn</option>
+              <option value="aquarius">Aquarius</option>
+              <option value="pisces">Pisces</option>
+            </select>
+          </div>
+          <div className="horoscope-data d-none">
+            <div className="date">
+              Current Date: <br/>
+              {this.state.json.current_date}
+            </div>
+            
+            <div className="row">
+              <div className="col-12 col-md-3">
+                <div className="row">
+                  <div className="col-6 col-md-12">
+                    <div className="bubble">
+                      <div className="bubble-text">
+                      Lucky Number: <br/>
+                      {this.state.json.lucky_number}
+                      </div>
+                    </div>
+                  </div>
+                  <div className="col-6 col-md-12">
+                    <div className="bubble">
+                      <div className="bubble-text">
+                      Lucky Color: <br/>
+                      {this.state.json.color}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="col-12 col-md-6">
+                <div className="row">
+                  <div className="col-12">
+                    <div className="bubble">
+                      <div className="bubble-text desc">
+                        Description: <br/>
+                        {this.state.json.description}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="col-12 col-md-3">
+                <div className="row">
+                  <div className="col-6 col-md-12">
+                    <div className="bubble">
+                      <div className="bubble-text">
+                      Lucky Time: <br/>
+                      {this.state.json.lucky_time}
+                      </div>
+                    </div>
+                  </div>
+                  <div className="col-6 col-md-12">
+                    <div className="bubble">
+                      <div className="bubble-text">
+                        Today's Mood: <br/>
+                        {this.state.json.mood}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="row">
+              <div className="col-6 offset-3 col-md-4 offset-md-4">
+                <div className="bubble">
+                  <div className="bubble-text">
+                  Compatibility: <br/>
+                  <img src="#" alt="compatible sign" id="compatibility"/>
+                  {this.state.json.compatibility}
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
         </div>
-        <div className="horoscope-data d-none">
-          Current Date: {this.state.json.current_date} <br />
-          Compatibility: {this.state.json.compatibility} <br />
-          Lucky Number: {this.state.json.lucky_number} <br />
-          Lucky Time: {this.state.json.lucky_time} <br />
-          Color: {this.state.json.color} <br />
-          Date Range: {this.state.json.date_range} <br />
-          Mood: {this.state.json.mood} <br />
-          Description: {this.state.json.description} <br />
-      </div>
     </React.Fragment>
     );
 }
