@@ -1,30 +1,3 @@
-h5 {
-  font-size: 16pt;
-  text-shadow: 3px 3px 5px rgba(0,0,0,0.5);
-  padding-bottom: 0.5em;
-  border-bottom: 1px solid;
-  border-image: linear-gradient(to left, transparent, #fff, transparent) 1;
-}
-h6 {
-  font-size: 28pt;
-  background: -webkit-linear-gradient(280deg, #ffb43f,#ffdda6 50%,#c57803 60%, #ffb43f 70%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-p {
-  font-size: 20pt;
-}
-.tile {
-  width: 100%;
-  background-color: #ffffff15;
-  margin: 1em 0;
-  box-shadow: 0 5px 10px -1px rgba(0,0,0,0.2);
-}
-.tile-text {
-  padding: 1em;
-  text-align: center;
-}
 .choose-sign, .date {
   text-align: center;
 }
@@ -48,6 +21,35 @@ option {
   color: #fff;
   padding: 3px;
 }
+.tile {
+  width: 100%;
+  background-color: #ffffff15;
+  margin: 1em 0;
+  box-shadow: 0 5px 10px -1px rgba(0,0,0,0.2);
+}
+.tile-text {
+  padding: 1em;
+  text-align: center;
+}
+h5 {
+  font-size: 16pt;
+  text-shadow: 3px 3px 5px rgba(0,0,0,0.5);
+  padding-bottom: 0.5em;
+  border-bottom: 1px solid;
+  border-image: linear-gradient(to left, transparent, #fff, transparent) 1;
+}
+h6 {
+  font-size: 22pt;
+  font-weight: bold;
+  background: -webkit-linear-gradient(280deg, #ffb43f,#ffdda6 50%,#c57803 60%, #ffb43f 70%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+p {
+  font-size: 18pt;
+  margin: 2em auto;
+}
 img {
   width: 40%;
 }
@@ -58,7 +60,6 @@ img {
   }
   h6 {
     font-size: 3vw;
-    font-weight: bold;
   }
   p {
     font-size: 18pt;
@@ -66,14 +67,14 @@ img {
 }
 
 @media (max-width: 575.98px) {
+  .choose-sign {
+    font-size: 14pt;
+  }
   h5 {
     font-size: 12pt;
   }
   h6 {
     font-size: 6vw;
-  }
-  .choose-sign {
-    font-size: 14pt;
   }
   p {
     font-size: 16pt;
