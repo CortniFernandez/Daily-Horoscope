@@ -1,10 +1,9 @@
 .bubble {
   width: 100%;
   padding-top: 100%;
-  border-radius: 5%;
   background-color: rgba(255,255,255,0.8);
-  color: #F4586D;
-  /*background: radial-gradient(at top left, #ffffff70, #ffffff90, #ffffff30, transparent, #ffffff20, #ffffff);*/
+  border-radius: 50%;
+  background: radial-gradient(at top left, #ffffff70, #ffffff90, #ffffff30, transparent, #ffffff20, #ffffff);
   position: relative;
   margin: 1em 0;
   box-shadow: 11px 11px 15px -1px rgba(0,0,0,0.47);
@@ -18,4 +17,3 @@
   padding: 2em;
   text-align: center;
 }
-

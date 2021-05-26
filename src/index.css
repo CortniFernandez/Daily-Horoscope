@@ -3,6 +3,6 @@ body {
   color: rgb(255, 252, 220);
   align-items: center;
 }
-.header, .footer, .choose-sign, .date {
+.header, .footer {
   text-align: center;
 }
