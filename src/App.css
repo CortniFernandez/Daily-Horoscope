@@ -1,19 +1,67 @@
-.bubble {
-  width: 100%;
-  padding-top: 100%;
-  background-color: rgba(255,255,255,0.8);
-  border-radius: 50%;
-  background: radial-gradient(at top left, #ffffff70, #ffffff90, #ffffff30, transparent, #ffffff20, #ffffff);
-  position: relative;
-  margin: 1em 0;
-  box-shadow: 11px 11px 15px -1px rgba(0,0,0,0.47);
+h5 {
+  font-size: 16pt;
+  text-shadow: 3px 3px 5px rgba(0,0,0,0.5);
+  padding-bottom: 0.5em;
+  border-bottom: 1px solid;
+  border-image: linear-gradient(to left, transparent, #fff, transparent) 1;
 }
-.bubble-text {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  padding: 2em;
+h6 {
+  font-size: 28pt;
+  background: -webkit-linear-gradient(280deg, #ffb43f,#ffdda6 50%,#c57803 60%, #ffb43f 70%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+p {
+  font-size: 20pt;
+}
+.tile {
+  width: 100%;
+  background-color: #ffffff15;
+  margin: 1em 0;
+  box-shadow: 0 5px 10px -1px rgba(0,0,0,0.2);
+}
+.tile-text {
+  padding: 1em;
   text-align: center;
+}
+.choose-sign, .date {
+  text-align: center;
+}
+.choose-sign {
+  font-size: 14pt;
+}
+label {
+  font-weight: bold;
+  text-shadow: 3px 3px 5px rgba(0,0,0,0.5);
+  margin: 1em;
+}
+select {
+  background-color: transparent;
+  border-color: #fff;
+  outline: #fff;
+  color: #fff;
+  padding: 5px;
+}
+option {
+  background-color: #37476d;
+  color: #fff;
+  padding: 3px;
+}
+img {
+  width: 40%;
+}
+
+
+@media (max-width: 575.98px) {
+  h5 {
+    font-size: 12pt;
+  }
+  h6 {
+    font-size: 6vw;
+    font-weight: bold;
+  }
+  .choose-sign {
+    font-size: 14pt;
+  }
 }

@@ -1,8 +1,40 @@
+html {
+  height: 100%;
+}
 body {
-  background-image: linear-gradient(to left bottom, #656ad6, #9761cb, #bc58bb, #d751a6, #e94f8e, #f3557f, #f95f71, #fc6b63, #ff795d, #ff8858, #ff9754, #ffa553);
-  color: rgb(255, 252, 220);
+  height: 100%;
+  background-image: linear-gradient(to top, #20273b 10%, #4b3759 30%, #814467, #b45462, #d57350);
+  background-repeat:no-repeat;
+  background-attachment: fixed;
+  color: #fff;
+  font-family: 'Quicksand', sans-serif;
   align-items: center;
 }
-.header, .footer {
+.header {
+  background: -webkit-linear-gradient(#ffb43f,#ffdda6 50%,#da9734 60%, #ffb43f 80%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: 'Abril Fatface', cursive;
+  font-size: 36pt;
+}
+.footer {
   text-align: center;
+  padding-bottom: 1em;
+  color: #999;
+}
+.footer > a {
+  color: #999;
+  text-decoration: none;
+}
+.footer > a:hover {
+  color: #d57350;
+  transition: 1s;
+}
+
+@media (max-width: 575.98px) {
+  .header {
+    text-align: center;
+    font-size: 28pt;
+  }
 }

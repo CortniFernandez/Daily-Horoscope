@@ -151,14 +151,14 @@ render() {
             <div className="row">
               <div className="col-6 offset-3 col-md-4 offset-md-4">
                 <div className="date">
-                  Current Date: <br/>
-                  {this.state.json.current_date}
+                  <h5>Current Date:</h5>
+                  <h6>{this.state.json.current_date}</h6>
                 </div>
-                <div className="bubble">
-                  <div className="bubble-text">
-                    Forcast for
+                <div className="tile">
+                  <div className="tile-text">
+                    <h5>Today's Horoscope For</h5>
                     <img className="img-fluid" alt="" id="mySignIcon" />
-                    <div id="mySignName"></div>
+                    <h6 id="mySignName"></h6>
                   </div>
                 </div>
               </div>
@@ -168,18 +168,18 @@ render() {
               <div className="col-12 col-md-3">
                 <div className="row">
                   <div className="col-6 col-md-12">
-                    <div className="bubble">
-                      <div className="bubble-text">
-                      Lucky Number: <br/>
-                      {this.state.json.lucky_number}
+                    <div className="tile">
+                      <div className="tile-text">
+                        <h5>Lucky Number:</h5>
+                        <h6>{this.state.json.lucky_number}</h6>
                       </div>
                     </div>
                   </div>
                   <div className="col-6 col-md-12">
-                    <div className="bubble">
-                      <div className="bubble-text">
-                      Lucky Color: <br/>
-                      {this.state.json.color}
+                    <div className="tile">
+                      <div className="tile-text">
+                        <h5>Lucky Color:</h5>
+                        <h6>{this.state.json.color}</h6>
                       </div>
                     </div>
                   </div>
@@ -188,10 +188,9 @@ render() {
               <div className="col-12 col-md-6">
                 <div className="row">
                   <div className="col-12">
-                    <div className="bubble">
-                      <div className="bubble-text desc">
-                        Description: <br/>
-                        {this.state.json.description}
+                    <div className="tile">
+                      <div className="tile-text desc">
+                        <p>{this.state.json.description}</p>
                       </div>
                     </div>
                   </div>
@@ -200,18 +199,18 @@ render() {
               <div className="col-12 col-md-3">
                 <div className="row">
                   <div className="col-6 col-md-12">
-                    <div className="bubble">
-                      <div className="bubble-text">
-                      Lucky Time: <br/>
-                      {this.state.json.lucky_time}
+                    <div className="tile">
+                      <div className="tile-text">
+                        <h5>Lucky Time:</h5>
+                        <h6>{this.state.json.lucky_time}</h6>
                       </div>
                     </div>
                   </div>
                   <div className="col-6 col-md-12">
-                    <div className="bubble">
-                      <div className="bubble-text">
-                        Today's Mood: <br/>
-                        {this.state.json.mood}
+                    <div className="tile">
+                      <div className="tile-text">
+                        <h5>Today's Mood:</h5>
+                        <h6>{this.state.json.mood}</h6>
                       </div>
                     </div>
                   </div>
@@ -220,11 +219,11 @@ render() {
             </div>
             <div className="row">
               <div className="col-6 offset-3 col-md-4 offset-md-4">
-                <div className="bubble">
-                  <div className="bubble-text">
-                  Compatibility: <br/>
-                  <img className="img-fluid" alt="" id="compatibility" />
-                  {this.state.json.compatibility}
+                <div className="tile">
+                  <div className="tile-text">
+                    <h5>Compatible With</h5>
+                    <img className="img-fluid" alt="" id="compatibility" /> <br/>
+                    <h6>{this.state.json.compatibility}</h6>
                   </div>
                 </div>
               </div>
