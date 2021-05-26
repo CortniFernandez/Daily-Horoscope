@@ -52,6 +52,18 @@ img {
   width: 40%;
 }
 
+@media (max-width: 991.98px) { 
+  .container {
+    max-width: 900px;
+  }
+  h6 {
+    font-size: 3vw;
+    font-weight: bold;
+  }
+  p {
+    font-size: 18pt;
+  }
+}
 
 @media (max-width: 575.98px) {
   h5 {
@@ -59,9 +71,11 @@ img {
   }
   h6 {
     font-size: 6vw;
-    font-weight: bold;
   }
   .choose-sign {
     font-size: 14pt;
+  }
+  p {
+    font-size: 16pt;
   }
 }
